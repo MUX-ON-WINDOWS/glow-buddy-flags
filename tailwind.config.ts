@@ -57,6 +57,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // GlowBuddy Custom Colors
+        "glow-green": "hsl(var(--glow-green))",
+        "glow-pink": "hsl(var(--glow-pink))",
+        "night-blue": "hsl(var(--night-blue))",
+        "glow-white": "hsl(var(--glow-white))",
       },
       borderRadius: {
         lg: "var(--radius)",

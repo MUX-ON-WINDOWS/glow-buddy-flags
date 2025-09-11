@@ -8,33 +8,51 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* GlowBuddy Festival Theme */
+    --background: 249 84% 15%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 249 84% 12%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 249 84% 12%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 249 84% 15%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 249 40% 25%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 249 40% 20%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 249 40% 25%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 249 40% 25%;
+    --input: 249 40% 20%;
+    --ring: 249 84% 15%;
+
+    --radius: 0.5rem;
+
+    /* GlowBuddy Custom Colors */
+    --glow-green: 118 100% 65%;
+    --glow-pink: 314 100% 64%;
+    --night-blue: 249 84% 15%;
+    --glow-white: 0 0% 100%;
+
+    /* Gradients */
+    --gradient-glow: linear-gradient(45deg, hsl(var(--glow-green)), hsl(var(--glow-pink)));
+    --gradient-night: linear-gradient(135deg, hsl(var(--night-blue)), hsl(249 60% 8%));
+    
+    /* Shadows & Glows */
+    --shadow-glow-green: 0 0 20px hsl(var(--glow-green) / 0.5);
+    --shadow-glow-pink: 0 0 20px hsl(var(--glow-pink) / 0.5);
+    --shadow-glow-mixed: 0 0 30px hsl(var(--glow-green) / 0.3), 0 0 60px hsl(var(--glow-pink) / 0.2);
 
     --radius: 0.5rem;
 
@@ -101,5 +119,53 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* GlowBuddy Custom Utilities */
+@layer utilities {
+  .glow-text-green {
+    color: hsl(var(--glow-green));
+    text-shadow: var(--shadow-glow-green);
+  }
+  
+  .glow-text-pink {
+    color: hsl(var(--glow-pink));
+    text-shadow: var(--shadow-glow-pink);
+  }
+  
+  .glow-border-green {
+    border-color: hsl(var(--glow-green));
+    box-shadow: var(--shadow-glow-green);
+  }
+  
+  .glow-border-pink {
+    border-color: hsl(var(--glow-pink));
+    box-shadow: var(--shadow-glow-pink);
+  }
+  
+  .glow-mixed {
+    box-shadow: var(--shadow-glow-mixed);
+  }
+  
+  .gradient-glow {
+    background: var(--gradient-glow);
+  }
+  
+  .gradient-night {
+    background: var(--gradient-night);
+  }
+  
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes pulse-glow {
+  from {
+    text-shadow: 0 0 10px hsl(var(--glow-green) / 0.3);
+  }
+  to {
+    text-shadow: 0 0 20px hsl(var(--glow-green) / 0.8), 0 0 30px hsl(var(--glow-green) / 0.4);
   }
 }
