@@ -97,11 +97,11 @@ const ProblemSolution = () => {
         {/* Stats */}
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div>
-            <div className="text-4xl font-bold glow-text-green mb-2">89%</div>
+            <div className="text-4xl font-bold glow-text-green mb-2">55%</div>
             <p className="text-gray-300">Van festivalgangers raakt hun tent kwijt</p>
           </div>
           <div>
-            <div className="text-4xl font-bold glow-text-pink mb-2">45min</div>
+            <div className="text-4xl font-bold glow-text-pink mb-2">30min</div>
             <p className="text-gray-300">Gemiddelde zoektijd per nacht</p>
           </div>
           <div>

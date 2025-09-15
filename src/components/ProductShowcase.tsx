@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import festivalTentFlag from "@/assets/festival-tent-flag.jpg";
 
 const ProductShowcase = () => {
   return (
@@ -17,14 +18,19 @@ const ProductShowcase = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           {/* Product Image Placeholder */}
           <div className="relative">
-            <div className="aspect-square bg-gradient-to-br from-night-blue via-purple-900 to-night-blue rounded-2xl flex items-center justify-center glow-mixed">
+          <img 
+                src={festivalTentFlag} 
+                alt="GlowBuddy lichtgevende vlag op tent tijdens festival"
+                className="w-full h-auto object-cover"
+              />
+            {/* <div className="aspect-square bg-gradient-to-br from-night-blue via-purple-900 to-night-blue rounded-2xl flex items-center justify-center glow-mixed">
               <div className="text-center">
                 <div className="w-48 h-48 mx-auto mb-4 bg-glow-green/20 rounded-full flex items-center justify-center glow-border-green">
                   <span className="text-6xl">🏴</span>
                 </div>
                 <p className="text-glow-green font-bold text-xl">GlowBuddy in actie!</p>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Steps */}

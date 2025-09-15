@@ -69,24 +69,24 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Features Quick Preview */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="text-center">
-            <div className="text-3xl mb-2">🌟</div>
-            <h4 className="font-semibold text-white mb-2">Zichtbaar in het Donker</h4>
-            <p className="text-gray-400 text-sm">LED-licht dat de hele nacht brandt</p>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl mb-2">🎨</div>
-            <h4 className="font-semibold text-white mb-2">Custom Design</h4>
-            <p className="text-gray-400 text-sm">Jouw eigen unieke stijl</p>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl mb-2">⚡</div>
-            <h4 className="font-semibold text-white mb-2">Festival-Proof</h4>
-            <p className="text-gray-400 text-sm">Waterdicht & stormbestendig</p>
-          </div>
-        </div>
+        {/* Features Quick Preview
+        // <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+        //   <div className="text-center">
+        //     <div className="text-3xl mb-2">🌟</div>
+        //     <h4 className="font-semibold text-white mb-2">Zichtbaar in het Donker</h4>
+        //     <p className="text-gray-400 text-sm">LED-licht dat de hele nacht brandt</p>
+        //   </div>
+        //   <div className="text-center">
+        //     <div className="text-3xl mb-2">🎨</div>
+        //     <h4 className="font-semibold text-white mb-2">Custom Design</h4>
+        //     <p className="text-gray-400 text-sm">Jouw eigen unieke stijl</p>
+        //   </div>
+        //   <div className="text-center">
+        //     <div className="text-3xl mb-2">⚡</div>
+        //     <h4 className="font-semibold text-white mb-2">Festival-Proof</h4>
+        //     <p className="text-gray-400 text-sm">Waterdicht & stormbestendig</p>
+        //   </div>
+        // </div> */}
       </div>
     </section>
   );
