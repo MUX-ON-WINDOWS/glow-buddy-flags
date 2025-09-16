@@ -2,14 +2,12 @@ import { type CarouselApi, Carousel, CarouselContent, CarouselItem, CarouselNext
 import foto1 from "@/assets/carousel/foto1.png";
 import foto2 from "@/assets/carousel/foto2.png";
 import foto3 from "@/assets/carousel/foto3.png";
-import foto4 from "@/assets/carousel/foto4.png";
 
 const PhotoCarousel = () => {
   const images = [
     { src: foto1, alt: "GlowBuddy foto 1" },
     { src: foto2, alt: "GlowBuddy foto 2" },
     { src: foto3, alt: "GlowBuddy foto 3" },
-    { src: foto4, alt: "GlowBuddy foto 4" },
   ];
 
   return (
@@ -20,20 +18,25 @@ const PhotoCarousel = () => {
             className="w-full"
             opts={{ loop: true }}
             setApi={(api: CarouselApi) => {
-              // Basic autoplay without external plugin
-              // Recreate interval on reInit
-              const setupAutoplay = () => {
-                // Clear any previous interval stored on api as a property
-                // @ts-expect-error - augmenting instance with a private field
-                if (api && api.__autoplayInterval) clearInterval(api.__autoplayInterval);
-                // @ts-expect-error - augmenting instance with a private field
-                api.__autoplayInterval = setInterval(() => {
+              let intervalId: number | undefined;
+
+              const start = () => {
+                if (intervalId) window.clearInterval(intervalId);
+                intervalId = window.setInterval(() => {
                   api.scrollNext();
                 }, 5000);
               };
 
-              setupAutoplay();
-              api.on("reInit", setupAutoplay);
+              const stop = () => {
+                if (intervalId) window.clearInterval(intervalId);
+                intervalId = undefined;
+              };
+
+              start();
+              api.on("pointerDown", stop);
+              api.on("pointerUp", start);
+              api.on("reInit", start);
+              api.on("destroy", stop);
             }}
           >
             <CarouselContent>
@@ -43,16 +46,17 @@ const PhotoCarousel = () => {
                     <img
                       src={image.src}
                       alt={image.alt}
-                      className="w-full h-[520px] md:h-[900px] object-cover rounded-xl shadow-xl"
+                      className="w-full h-[540px] md:h-[940px] object-cover rounded-xl shadow-xl"
                       loading="lazy"
                       width={1000}
+                      
                     />
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="-left-3 md:-left-6" />
-            <CarouselNext className="-right-3 md:-right-6" />
+            <CarouselPrevious className="-left-3 md:-left-6 bg-glow-green text-night-blue hover:bg-glow-pink hover:text-night-blue" />
+            <CarouselNext className="-right-3 md:-right-6 bg-glow-green text-night-blue hover:bg-glow-pink hover:text-night-blue" />
           </Carousel>
         </div>
       </div>

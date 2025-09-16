@@ -25,24 +25,27 @@ const Hero = () => {
               </p>
             </div>
 
+            {/* GlowBuddy is dé glow-in-the-dark vlag die je festivalervaring makkelijker én leuker maakt. 
+            Ontwerp je eigen vlag, zodat je jouw tent altijd terugvindt in het donker en samen met vrienden een unieke festivalcommunity creëert. */}
+
             {/* Problem Statement */}
-            <div className="mb-8">
+            {/* <div className="mb-8">
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">
                 "Waar is mijn tent?!"
               </h2>
               <p className="text-base md:text-lg text-gray-300 mb-6 max-w-lg mx-auto lg:mx-0">
                 Het is 3 uur 's nachts, je komt terug van het podium, en alle tenten zien er hetzelfde uit.
               </p>
-            </div>
+            </div> */}
 
             {/* Solution */}
             <div className="mb-8">
               <h3 className="text-xl md:text-2xl font-semibold mb-4 text-white">
-                Meet je nieuwe <span className="glow-text-green">GlowBuddy</span>
+                <span className="glow-text-green">GlowBuddy</span> is dé glow-in-the-dark vlag die je festivalervaring makkelijker én leuker maakt.
+                {/* Meet je nieuwe <span className="glow-text-green">GlowBuddy</span> */}
               </h3>
               <p className="text-base md:text-lg text-gray-300 mb-6 max-w-lg mx-auto lg:mx-0">
-                Een lichtgevende vlag die je tent onmiskenbaar maakt. Custom design, 
-                nachtzichtbaarheid, en 100% festival-proof!
+                Ontwerp je eigen vlag, zodat je jouw tent altijd terugvindt in het donker en samen met vrienden een unieke festivalcommunity creëert.
               </p>
             </div>
 
