@@ -31,11 +31,9 @@ const CTASection = () => {
         {/* Pricing */}
         <div className="bg-card/50 border border-glow-green/30 rounded-2xl p-8 mb-8 glow-mixed">
           <div className="text-center mb-6">
-            <div className="text-gray-400 line-through text-xl mb-2">€39,95</div>
             <div className="text-5xl font-bold text-white mb-2">
-              €31,96
+              €39,95
             </div>
-            <div className="text-glow-green font-semibold">Launch Aanbieding - 20% Korting!</div>
           </div>
           
           <div className="space-y-3 mb-8">
