@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
 
 const CTASection = () => {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
   return (
     <section className="py-20 px-4 gradient-night">
       <div className="max-w-4xl mx-auto text-center">
@@ -61,6 +66,39 @@ const CTASection = () => {
           <p className="text-sm text-gray-400">
             💳 Veilig betalen • 📦 Levering binnen 3 werkdagen • 🔒 SSL beveiligd
           </p>
+        </div>
+
+        {/* Nieuwsbrief: 10% korting */}
+        <div className="mt-12 bg-card/40 border border-glow-pink/20 rounded-2xl p-6 glow-mixed">
+          <h3 className="text-2xl font-semibold text-white mb-2">Ontvang 10% korting</h3>
+          <p className="text-gray-300 mb-4">
+            Schrijf je in voor onze nieuwsbrief en ontvang direct 10% korting op je eerste aankoop.
+          </p>
+          {submitted ? (
+            <p className="text-glow-green font-semibold">Dankjewel! Check je inbox voor je kortingscode. ✉️</p>
+          ) : (
+            <form
+              className="flex flex-col sm:flex-row gap-3 justify-center"
+              onSubmit={(e) => {
+                e.preventDefault();
+                if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return;
+                setSubmitted(true);
+              }}
+            >
+              <Input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Jouw e-mailadres"
+                className="bg-background/60 border-glow-pink/30 text-white"
+                required
+              />
+              <Button type="submit" variant="glow" className="whitespace-nowrap">
+                Ontvang 10% korting
+              </Button>
+            </form>
+          )}
+          <p className="text-xs text-gray-500 mt-3">Geen spam. Je kunt je altijd uitschrijven.</p>
         </div>
 
         {/* Testimonial */}
