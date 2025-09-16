@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import festivalTentFlag from "@/assets/festival-tent-flag.jpg";
+import festivalTentFlag from "@/assets/FestivalMetVriendenGroep.png";
 
 const Hero = () => {
   return (

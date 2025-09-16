@@ -41,7 +41,7 @@ const ProductShowcase = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-white mb-2">Bevestig aan je tent</h3>
-                <p className="text-gray-300">Eenvoudig te bevestigen met sterke clips - werkt op elke tent!</p>
+                <p className="text-gray-300">Eenvoudig te bevestigen met een stevige paal - werkt op elke tent!</p>
               </div>
             </div>
 
@@ -50,8 +50,8 @@ const ProductShowcase = () => {
                 2
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white mb-2">Activeer de LED-lichten</h3>
-                <p className="text-gray-300">Druk op de knop en je vlag begint te gloeien - batterij gaat de hele nacht mee!</p>
+                <h3 className="text-xl font-bold text-white mb-2">De vlag laat zichzelf op door de zon</h3>
+                <p className="text-gray-300">Je hoeft verder niks te doen, geniet van je festival!</p>
               </div>
             </div>
 
@@ -90,7 +90,7 @@ const ProductShowcase = () => {
             <Card className="p-6 bg-card border-glow-green/30 glow-border-green">
               <div className="text-4xl mb-4">🌈</div>
               <h4 className="font-bold text-white mb-2">Kleur Keuzes</h4>
-              <p className="text-gray-300">Verschillende LED-kleuren beschikbaar</p>
+              <p className="text-gray-300">Verschillende kleuren beschikbaar</p>
             </Card>
           </div>
 

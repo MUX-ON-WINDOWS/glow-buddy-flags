@@ -26,21 +26,21 @@ const CTASection = () => {
         {/* Pricing */}
         <div className="bg-card/50 border border-glow-green/30 rounded-2xl p-8 mb-8 glow-mixed">
           <div className="text-center mb-6">
-            <div className="text-gray-400 line-through text-xl mb-2">€59,99</div>
+            <div className="text-gray-400 line-through text-xl mb-2">€39,95</div>
             <div className="text-5xl font-bold text-white mb-2">
-              €39,99
+              €31,96
             </div>
-            <div className="text-glow-green font-semibold">Launch Aanbieding - 33% Korting!</div>
+            <div className="text-glow-green font-semibold">Launch Aanbieding - 20% Korting!</div>
           </div>
           
           <div className="space-y-3 mb-8">
             <div className="flex items-center justify-center gap-2 text-gray-300">
-              <span className="text-glow-green">✓</span>
-              <span>Inclusief LED-systeem & batterij</span>
+              <span className="text-glow-green">✓</span> 
+              <span>Inclusief vlaggenpaal</span>
             </div>
             <div className="flex items-center justify-center gap-2 text-gray-300">
               <span className="text-glow-green">✓</span>
-              <span>Custom design service</span>
+              <span>Gepersonaliseerde vlaggen</span>
             </div>
             <div className="flex items-center justify-center gap-2 text-gray-300">
               <span className="text-glow-green">✓</span>
@@ -56,7 +56,7 @@ const CTASection = () => {
         {/* Main CTA */}
         <div className="space-y-4">
           <Button variant="glow" size="lg" className="text-xl px-12 py-6 w-full sm:w-auto">
-            🛒 Bestel Nu - €39,99
+            🛒 Bestel Nu - €39,95
           </Button>
           <p className="text-sm text-gray-400">
             💳 Veilig betalen • 📦 Levering binnen 3 werkdagen • 🔒 SSL beveiligd
